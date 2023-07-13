@@ -12,11 +12,11 @@ import (
 )
 
 const (
-	dbHost     = "localhost"
+	dbHost     = ""
 	dbPort     = 5432
-	dbUser     = "admin"
-	dbPassword = "admin"
-	dbName     = "go-bookstore"
+	dbUser     = ""
+	dbPassword = ""
+	dbName     = ""
 )
 
 func main() {
