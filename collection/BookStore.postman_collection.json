@@ -1,0 +1,430 @@
+{
+	"info": {
+		"_postman_id": "36690169-942e-44b2-b0f3-661435428ecf",
+		"name": "BookStoreEnvs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dev",
+			"item": [
+				{
+					"name": "Authors",
+					"item": [
+						{
+							"name": "Get All Authors",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/authors",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"authors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Author By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/authors/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"authors",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Author By Name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/authors/name/Mark Twain",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"authors",
+										"name",
+										"Mark Twain"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Books",
+					"item": [
+						{
+							"name": "Post Book",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"book_name\": \"TESTEEEE\",\r\n    \"edition\": \"TESTEEEE\",\r\n    \"publication_year\": \"TESTEEEE\",\r\n    \"authors\": [5]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/books",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Book",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/books?page=20&limit=3",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "20"
+										},
+										{
+											"key": "limit",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Book By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/books/23",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"books",
+										"23"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Book",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 63\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/books/63",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"books",
+										"63"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Book",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 39,\r\n    \"book_name\": \"OPSSSSSSS\",\r\n    \"edition\": \"TESTEEEE\",\r\n    \"publication_year\": \"TESTEEEE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/books/39",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"books",
+										"39"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Prod",
+			"item": [
+				{
+					"name": "Authors",
+					"item": [
+						{
+							"name": "Get All Authors",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{domain}}/authors",
+									"protocol": "https",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"authors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Author By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/authors/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"authors",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Author By Name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/authors/name/Mark Twain",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"authors",
+										"name",
+										"Mark Twain"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Books",
+					"item": [
+						{
+							"name": "Post Book",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"book_name\": \"TESTEEEE\",\r\n    \"edition\": \"TESTEEEE\",\r\n    \"publication_year\": \"TESTEEEE\",\r\n    \"authors\": [5]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}/books",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Book",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}/books?page=20&limit=3",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "20"
+										},
+										{
+											"key": "limit",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Book By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{domain}}/books/23",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"books",
+										"23"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Book",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 63\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}/books/63",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"books",
+										"63"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Book",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 39,\r\n    \"book_name\": \"OPSSSSSSS\",\r\n    \"edition\": \"TESTEEEE\",\r\n    \"publication_year\": \"TESTEEEE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{domain}}/books/39",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"books",
+										"39"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

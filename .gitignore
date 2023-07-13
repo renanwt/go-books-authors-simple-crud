@@ -1,0 +1,14 @@
+.env
+.env.*
+.idea/
+.vscode/
+*.o
+*.pyc
+/build/
+/dist/
+/node_modules/
+/logs/
+*.log
+*.tmp
+.vimrc
+.bashrc
