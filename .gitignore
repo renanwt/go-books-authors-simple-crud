@@ -12,3 +12,5 @@
 *.tmp
 .vimrc
 .bashrc
+# Go workspace file
+go.work
